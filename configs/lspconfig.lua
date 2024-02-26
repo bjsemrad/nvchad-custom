@@ -1,17 +1,18 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require "lspconfig"
+local lspconfig = require "plugins.configs.lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { 
-  "html", 
-  "cssls", 
-  "tsserver", 
-  "clangd", 
-  "rust_analyzer", 
+local servers = {
+  "html",
+  "cssls",
+  "tsserver",
+  "clangd",
+  "rust_analyzer",
   "jdtls",
- }
+  "gopls",
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -20,9 +21,9 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.rust_analyzer.setup({
-    cmd = {'rustup', 'run', 'stable', 'rust-analyzer'}
-})
+-- lspconfig.rust_analyzer.setup({
+-- cmd = {'rustup', 'run', 'stable', 'rust-analyzer'}
+-- })
 
--- 
+--
 -- lspconfig.pyright.setup { blabla}

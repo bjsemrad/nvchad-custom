@@ -45,7 +45,8 @@ M.mason = {
 
     "rust-analyzer",
     "jdtls",
-  },
+    "gopls",
+   },
 }
 
 -- git support in nvimtree
