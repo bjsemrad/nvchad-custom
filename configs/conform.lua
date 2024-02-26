@@ -10,7 +10,8 @@ local options = {
 		html = { "prettier" },
 
 		sh = { "shfmt" },
-    rust = { "rustfmt"}
+    rust = { "rustfmt"},
+    go = { "gofmt"},
 	},
 
   -- adding same formatter for multiple filetypes can look too much work for some
